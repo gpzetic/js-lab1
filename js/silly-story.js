@@ -5,7 +5,7 @@
 - randomize for the button
 - story for the paragraph that outputs the final story
 */
-var customName = document.getElementById("customname").value;
+var customName = document.getElementById("customname");
 var story = document.querySelector(".story");
 var randomize = document.querySelector(".randomize");
 /* STEP 3: Create the variable that contains the story string that will be modified 
@@ -52,7 +52,7 @@ function result() {
     newStory = newStory.replace(":insertz:", zItem);
 
     /* STEP 10: If the user has typed a name in the customName field, replace the name 'Bob' in the story with whatever they typed */
-    if (customName != "") newStory = newStory.replace("Bob", customName);
+    if (customName.value != "") newStory = newStory.replace("Bob", customName.value);
     /* STEP 11: If the metric radio button has been checked, we need to convert the temperature and mass numbers in the story */
     if (document.getElementById("metric").checked) {
         // STEP 11a: Create a variable called weight and convert the 300lbs to kgs (1lb = 0.453592kg)
