@@ -52,7 +52,7 @@ function result() {
     newStory = newStory.replace(":insertz:", zItem);
 
     /* STEP 10: If the user has typed a name in the customName field, replace the name 'Bob' in the story with whatever they typed */
-    newStory = newStory.replace("Bob", customName);
+    if (customName != "") newStory = newStory.replace("Bob", customName);
     /* STEP 11: If the metric radio button has been checked, we need to convert the temperature and mass numbers in the story */
     if (document.getElementById("metric").checked) {
         // STEP 11a: Create a variable called weight and convert the 300lbs to kgs (1lb = 0.453592kg)
